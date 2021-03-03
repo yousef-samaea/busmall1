@@ -28,7 +28,7 @@ body>header:after {
   width: 100%;
   height: 10px;
   z-index: 100;
-  box-shadow: 0 0 10px rgba(0, 0, 0, .8);
+  box-shadow: 0 0 10px rgba(61, 47, 47, 0.8);
 }
 
 body>header nav {
@@ -82,9 +82,9 @@ main {
 /* Footer Styling and sticking to the bottom */
 
 footer {
-  background: #eee;
-  border-top: 1px solid #ccc;
-  color: #666;
+  background: rgb(248, 241, 241);
+  border-top: 1px solid rgb(179, 172, 172);
+  color: rgb(95, 80, 80);
   display: block;
   height: 1.5em;
   padding: .5em 5em;
@@ -113,7 +113,7 @@ footer {
 /* Card styles specific to this application */
 
 .card header {
-  background: #813772;
+  background: #d82eb6;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   color: #eee;
@@ -180,7 +180,7 @@ label span {
 
 #cart thead tr th {
   color: #777;
-  border-bottom: 3px solid #062f4f;
+  border-bottom: 3px solid #195d92;
   font-weight: bold;
   padding: .5em 1em;
 }
@@ -202,6 +202,6 @@ label span {
 }
 
 #cart tr td:first-child {
-  color: red;
+  color: rgb(247, 17, 17);
   cursor: pointer;
 }
