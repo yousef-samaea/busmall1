@@ -2,13 +2,13 @@
 'use strict';
 
 // Create an event listener so that when the delete link is clicked, the removeItemFromCart method is invoked.
-var table = document.getElementById('cart');
-var mainContainer = table.firstElementChild.nextElementSibling;
+let table = document.getElementById('cart');
+let mainContainer = table.firstElementChild.nextElementSibling;
 table.addEventListener('click', removeItemFromCart);
-var cart;
+let cart;
 
 function loadCart() {
-  var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+  let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
   cart = new Cart(cartItems);
 }
 
@@ -21,10 +21,10 @@ function renderCart() {
 
 // TODO: Remove all of the rows (tr) in the cart table (tbody)
 function clearCart() {
-  var mainContainer = table.firstElementChild.nextElementSibling;
-var parentContainer= mainContainer.parentElement;
+  let mainContainer = table.firstElementChild.nextElementSibling;
+let parentContainer= mainContainer.parentElement;
 parentContainer.removeChild(mainContainer);
-var newTbody= document.createElement('tbody');
+let newTbody= document.createElement('tbody');
 parentContainer.appendChild(newTbody);
   // console.log(mainContainer.childElementCount);
   // for (var m = 0 ; m < mainContainer.childElementCount;m++){
@@ -35,17 +35,17 @@ parentContainer.appendChild(newTbody);
 }
 // TODO: Fill in the <tr>'s under the <tbody> for each item in the cart
 function showCart() {
-  var mainContainer = table.firstElementChild.nextElementSibling;
+  let mainContainer = table.firstElementChild.nextElementSibling;
   for (var i = 0; i < cart.items.length; i++) {
-    var tr = document.createElement('tr');
+    let tr = document.createElement('tr');
     tr.setAttribute('id' ,`${i}`);
-    var td1 = document.createElement('td');
+    let td1 = document.createElement('td');
     td1.innerHTML = "<a href=# >x</a>";
     tr.appendChild(td1);
-    var td2 = document.createElement('td');
+    let td2 = document.createElement('td');
     td2.textContent = cart.items[i].product;
     tr.appendChild(td2);
-    var td3 = document.createElement('td');
+    let td3 = document.createElement('td');
     td3.textContent = cart.items[i].quantity;
     tr.appendChild(td3);
     mainContainer.appendChild(tr);
